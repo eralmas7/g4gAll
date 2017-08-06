@@ -6,14 +6,6 @@ To use the scrapper, install the following:
 
 `$ sudo apt-get install wkhtmltopdf`
 
-Then create venv
-
-`$ virtualenv /path/to/g4g-env`
-
-Switch to venv
-
-`$ source /path/to/g4g-env/bin/activate`
-
 Now install BeautifulSoup as:
 
 `$ pip install beautifulsoup4`
@@ -33,3 +25,4 @@ $ python g4gMainAll.py
 You can find the output as `G4G_<chunk number>.html` and `G4G_<chunk number>.pdf` in the same directory.
 
 ### Disclaimer: This is strictly for educational purpose only.
+### Mostly issues if any then you would need to drop down the default value of maxCount defined in method downloadAll according to your system capacity.

@@ -115,7 +115,7 @@ def scrape_category(category_url):
     print("Found: " + str(len(links)) + " links")
     return category_url
 
-def downloadAll():
+def downloadAll(maxCount=1000):
     i = 1
     count = 0
 
@@ -129,7 +129,7 @@ def downloadAll():
         except ConnectionError:
             print("Will download again from " + str(link))
             download(link)
-        if (count == 1000):
+        if (count == maxCount):
             gc.collect()
             save_articles_as_html_and_pdf('file' + str(i))
             del articles[:]
